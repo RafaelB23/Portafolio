@@ -5,8 +5,11 @@ body{
     font-family: "Roboto";
     color: white;
 }
+p{
+    margin: 0;
+}
 .index{
-    padding: 0 150px;
+    /* padding: 0 150px; */
 }
 .nav__div{
     position: fixed;
@@ -28,7 +31,7 @@ nav{
     align-items: center;
     font-size: 16px;
 }
-.logo{
+.logo, .logo__ghost{
     display: flex;
     font-weight: 600;
     height: 30px;
@@ -40,6 +43,9 @@ nav{
     color: white;
     cursor: pointer;
     text-decoration: none;
+}
+.logo__ghost{
+    visibility: hidden;
 }
 ul{
     display:flex;
@@ -56,23 +62,48 @@ ul{
 }
 section{
     height: 100vh;
-    padding-top: 80px;
+    /* padding-top: 80px; */
+    /* padding-left: 150px;
+    padding-right: 150px; */
 }
 
 /* HOME */
+.hero{
+    height: 100%;
+    align-items: center;
+}
 .home__header{
     font-size: 3em;
     font-weight: 800;
 }
-.hero{
-    display: flex;
-}
 .home__presentation{
     font-size: 2em;
+    font-weight: 300;
+    line-height: 50px;
+}
+.hero, .block{
+    display: flex;
+    padding-left: 150px;
+    padding-right: 150px;
+    align-content: center;
+}
+.block{
+    padding-top: 3.5em;
+}
+.title__block{
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    font-size: 3em;
+}
+.home__text{
     width: 50%;
 }
 .focus__name{
     color: #E35D6A;
+}
+.hero__img{
+    width: 50%;
 }
 /* EDUCATION */
 

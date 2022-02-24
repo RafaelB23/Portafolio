@@ -15,6 +15,7 @@ export default class Nav extends Component {
                 <a className='nav__item' href='#contact'>Contact me</a>
             </ul>
         </nav>
+        <a className='logo__ghost' href='#home'>RAMB.code</a>
       </div>
       </>
     )

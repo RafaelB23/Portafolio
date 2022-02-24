@@ -11,7 +11,7 @@ export class Home extends Component {
                         <p className='home__header'>Hi <span>✋🏻</span>!</p>
                         <p className='home__presentation'>I'm <span className='focus__name'>Rafael Mejia</span>. Software developer very passionate and professional.</p>
                     </div>
-                    <img src={hero} alt="hero__programing" />
+                    <img className='hero__img' src={hero} alt="hero__programing" />
                 </div>
                 
             </>
@@ -22,7 +22,9 @@ export class Education extends Component {
     render() {
         return (
             <>
-                <h1>Education</h1>
+                <div className="block">
+                    <h1 className='title__block'>Education</h1>
+                </div>
             </>
         )
     }
@@ -31,7 +33,9 @@ export class Experience extends Component {
     render() {
         return (
             <>
-                <h1>Experience</h1>
+                <div className="block">
+                    <h1 className='title__block'>Experience</h1>
+                </div>
             </>
         )
     }
@@ -40,7 +44,9 @@ export class Projects extends Component {
     render() {
         return (
             <>
-                <h1>Projects</h1>
+                <div className="block">
+                    <h1 className='title__block'>Projects</h1>
+                </div>
             </>
         )
     }
@@ -49,7 +55,9 @@ export class About extends Component {
     render() {
         return (
             <>
-                <h1>About me</h1>
+                <div className="block">
+                    <h1 className='title__block'>About me</h1>
+                </div>
             </>
         )
     }
@@ -58,7 +66,9 @@ export class Contact extends Component {
     render() {
         return (
             <>
-                <h1>Contact me</h1>
+                <div className="block">
+                    <h1 className='title__block'>Contact me</h1>
+                </div>
             </>
         )
     }
