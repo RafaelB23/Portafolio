@@ -8,6 +8,7 @@ import {Home, Education, Experience, Projects, About, Contact} from "../componen
 const IndexPage = () => {
   return (
     <main>
+      <title>Rafael Mejia</title>
       <Nav></Nav>
       <div className="index">
         <section id="home">
