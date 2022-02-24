@@ -58,6 +58,21 @@ git remote add <Identificador> https://github.com/RafaelB23/portafolio-2022
 npm install
 
 Actualizar repo
+  
+  ```shell
+  # create a new Gatsby site using the minimal starter
+  git fetch <Identificador>
+  git pull <Identificador> main
+  ```
+  
+  ```shell
+  # Actualizar el repositorio remoto
+  git push <Identificador>
+  git fetch <Identificador>
+  
+  ```
 
-git fetch <Identificador>
-git pull <Identificador> main
+  ```shell
+  # Actualizar repositorio local (jalar info)
+  git pull <Identificador> main
+  ```
