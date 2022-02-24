@@ -9,9 +9,6 @@ body{
 p{
     margin: 0;
 }
-.index{
-    /* padding: 0 150px; */
-}
 .nav__div{
     position: fixed;
     right: 0;

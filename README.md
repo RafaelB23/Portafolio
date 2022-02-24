@@ -62,8 +62,6 @@ Actualizar repo
   ```shell
   # Actualizar el repositorio remoto
   git push <Identificador>
-  git fetch <Identificador>
-  
   ```
 
   ```shell
