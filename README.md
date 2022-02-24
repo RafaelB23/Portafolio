@@ -58,6 +58,17 @@ git remote add <Identificador> https://github.com/RafaelB23/portafolio-2022
 npm install
 
 Actualizar repo
-git push <Identificador>
-git fetch <Identificador>
-git pull <Identificador> main
+  
+  ```shell
+  # Actualizar el repositorio remoto
+  git push <Identificador>
+  git fetch <Identificador>
+  
+  ```
+
+  ```shell
+  # Actualizar repositorio local (jalar info)
+  git pull <Identificador> main
+  ```
+
+Actualizado...
