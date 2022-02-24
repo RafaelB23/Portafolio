@@ -56,5 +56,30 @@ ul{
 }
 section{
     height: 100vh;
-    padding-top: 40px;
+    padding-top: 80px;
 }
+
+/* HOME */
+.home__header{
+    font-size: 3em;
+    font-weight: 800;
+}
+.hero{
+    display: flex;
+}
+.home__presentation{
+    font-size: 2em;
+    width: 50%;
+}
+.focus__name{
+    color: #E35D6A;
+}
+/* EDUCATION */
+
+/* EXPERIENCE */
+
+/* PROJECTS */
+
+/* ABOUT ME */
+
+/* CONTACT ME */

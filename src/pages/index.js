@@ -1,8 +1,9 @@
 import * as React from "react"
 import '../style.css'
 import Nav from "../components/nav"
+import {Home, Education, Experience, Projects, About, Contact} from "../components/home"
 
-
+//https://emojipedia.org  
 // markup
 const IndexPage = () => {
   return (
@@ -10,22 +11,22 @@ const IndexPage = () => {
       <Nav></Nav>
       <div className="index">
         <section id="home">
-          <h1>Home</h1>
+          <Home></Home>
         </section>
         <section id="edu">
-          <h1>Education</h1>
+          <Education></Education>
         </section>
         <section id="exp">
-          <h1>Experience</h1>
+          <Experience></Experience>
         </section>
         <section id="projects">
-          <h1>Projects</h1>
+          <Projects></Projects>
         </section>
         <section id="about">
-          <h1>About me</h1>
+          <About></About>
         </section>
         <section id="contact">
-          <h1>Contact me</h1>
+          <Contact></Contact>
         </section>
       </div>
     </main>
