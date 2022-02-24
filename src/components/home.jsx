@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import "../style.css"
 import hero from '../images/undraw_programming_re_kg9v.svg'
-
+import edu from '../images/undraw_graduation_re_gthn.svg'
 export class Home extends Component {
     render() {
         return (
@@ -11,7 +11,7 @@ export class Home extends Component {
                         <p className='home__header'>Hi <span>✋🏻</span>!</p>
                         <p className='home__presentation'>I'm <span className='focus__name'>Rafael Mejia</span>. Software developer very passionate and professional.</p>
                     </div>
-                    <img className='hero__img' src={hero} alt="hero__programing" />
+                    <img className='block__img' src={hero} alt="hero__programing" />
                 </div>
                 
             </>
@@ -24,6 +24,12 @@ export class Education extends Component {
             <>
                 <div className="block">
                     <h1 className='title__block'>Education</h1>
+                    <div className='block__content'>
+                        <img className='block__img' src={edu} alt="graduation" />
+                        <p className='edu__text'>I am an eighth-semester student of <span className='focus__name'>Software Technology Engineering</span> at the Autonomous 
+                            University of Nuevo León. With self-taught knowledge of front-end and back-end for 
+                            web and mobile development and with a long way to continue learning.</p>
+                    </div>
                 </div>
             </>
         )
