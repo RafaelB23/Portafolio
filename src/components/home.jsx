@@ -3,6 +3,7 @@ import { GlassBox, GlassCard } from './glass'
 import "../style.css"
 import hero from '../images/undraw_programming_re_kg9v.svg'
 import edu from '../images/undraw_graduation_re_gthn.svg'
+import exp from '../images/undraw_developer_activity_re_39tg.svg'
 export class Home extends Component {
     render() {
         return (
@@ -46,6 +47,13 @@ export class Experience extends Component {
                     <h1 className='title__block'>Experience</h1>
                     <div className="block__content">
                         <GlassBox></GlassBox>
+                        <div className='exp__box'>
+                            
+                            {/* <p className='exp__text'>I worked on some projects where I developed a 
+                                complete environment following agile methodologies 
+                                such as the SCRUM and the waterfall methodology.</p> */}
+                        </div>
+                        <img className='block__img' src={exp} alt="graduation" />
                     </div>
                 </div>
             </>
@@ -58,6 +66,9 @@ export class Projects extends Component {
             <>
                 <div className="block">
                     <h1 className='title__block'>Projects</h1>
+                    <div className="block__content">
+                        <GlassCard></GlassCard>
+                    </div>
                 </div>
             </>
         )
