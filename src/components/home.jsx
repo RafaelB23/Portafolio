@@ -47,12 +47,6 @@ export class Experience extends Component {
                     <h1 className='title__block'>Experience</h1>
                     <div className="block__content">
                         <GlassBox></GlassBox>
-                        <div className='exp__box'>
-                            
-                            {/* <p className='exp__text'>I worked on some projects where I developed a 
-                                complete environment following agile methodologies 
-                                such as the SCRUM and the waterfall methodology.</p> */}
-                        </div>
                         <img className='block__img' src={exp} alt="graduation" />
                     </div>
                 </div>
