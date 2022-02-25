@@ -76,9 +76,32 @@ section{
     font-weight: 800;
 }
 .home__presentation{
-    font-size: 2em;
+    font-size: 2.4em;
     font-weight: 300;
     line-height: 50px;
+}
+.home__cvtxt{
+    font-size: 2em;
+    font-weight: 300;
+    padding: 1em 0;
+}
+.btn__cv{
+    border-radius: 5px;
+    padding: 1em 2em;
+    background-color: #E35D6A;
+    border: none;
+    font-family: "Roboto";
+    font-size: medium;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: white;
+}
+.btn__cv:hover{
+    transform: scale(1.1);
+    background-color: #D43D4C;
+}
+.btn__cv:active{
+    transform: scale(0.9);
 }
 .hero, .block__content{
     display: flex;
@@ -120,12 +143,22 @@ section{
     font-weight: 300;
     line-height: 1.5em;
     margin-left: 0.5em;
-    font-size: 2em;
+    font-size: 2.4em;
 }
 .block__img{
     margin-right: 0.5em;
 }
 /* EXPERIENCE */
+.grid-container{
+    backdrop-filter: blur(40px);
+    display: grid; 
+}
+.grid-item{
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.skill-icon{
+    width: 4em;
+}
 
 /* PROJECTS */
 

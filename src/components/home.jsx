@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { GlassBox, GlassCard } from './glass'
 import "../style.css"
 import hero from '../images/undraw_programming_re_kg9v.svg'
 import edu from '../images/undraw_graduation_re_gthn.svg'
@@ -10,6 +11,8 @@ export class Home extends Component {
                     <div className='hero__text'>
                         <p className='home__header'>Hi <span>✋🏻</span>!</p>
                         <p className='home__presentation'>I'm <span className='focus__name'>Rafael Mejia</span>. Software developer very passionate and professional.</p>
+                        <p className='home__cvtxt'>Here you can download my CV...</p>
+                        <button className='btn__cv'>Resume CV</button>
                     </div>
                     <img className='block__img' src={hero} alt="hero__programing" />
                 </div>
@@ -41,6 +44,9 @@ export class Experience extends Component {
             <>
                 <div className="block">
                     <h1 className='title__block'>Experience</h1>
+                    <div className="block__content">
+                        <GlassBox></GlassBox>
+                    </div>
                 </div>
             </>
         )
