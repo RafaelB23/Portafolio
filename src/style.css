@@ -125,7 +125,7 @@ ul{
     text-align: center;
 }
 .focus__name{
-    color: #E35D6A;
+    color: var(--focus-color);
 }
 .block__img{
     width: 100%;
@@ -165,37 +165,81 @@ ul{
     bg
     border
     */
-    border: 1px solid white ;
-    border-radius: 15px;
+    min-width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.5) ;
+    border-radius: var(--border-radius);
     padding: 1.5em;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(40px);
+}
+.proj__card:hover{
+    transform: scale(1.1);
+    margin:0 10px;
 }
 .proj__img{
     /* 
     size
     hover
     */
+    max-width: 100%;
+    border-radius: var(--border-radius);
 }
 .proj__name{
     /* 
     style
     size
     */
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
 }
 .proj__desc{
     /* 
     size
     */
+    text-align: center;
 }
 .proj__footer{
     /* 
     inline to rigth
     */
+    display: flex;
+    padding-top: 1.5em;
+    left: 0; right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    gap: 2em;
 }
 .proj__btn__demo{
-
+    border-radius: 5px;
+    padding: .5em 1em;
+    height: 40px;
+    background-color: #E35D6A;
+    border: none;
+    font-family: "Roboto";
+    font-size: medium;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: white;
 }
 .proj__btn__git{
-    
+    height: 40px;
+}
+.proj__btn__demo:hover{
+    transform: scale(1.1);
+    background-color: #D43D4C;
+}
+.proj__btn__git:hover{
+    transform: scale(1.1);
+}
+.proj__btn__demo:active{
+    transform: scale(0.9);
+}
+.proj__btn__git:active{
+    transform: scale(0.9);
+    filter: brightness(120%);
 }
 
 /* ABOUT ME */
@@ -207,3 +251,9 @@ ul{
 }
 
 /* RESPONSIVE DESING */
+
+
+:root{
+    --focus-color:#E35D6A;
+    --border-radius:10px;
+}

@@ -49,7 +49,7 @@ export class GlassCard extends Component {
         <p className='proj__desc'>{this.props.value.desc}</p>
         <div className='proj__footer'>
           <button className='proj__btn__demo'>Demo</button>
-          <img className='proj__btn__git' src={github} alt="git" height="30px"/>
+          <img className='proj__btn__git' src={github} alt="git"/>
         </div>
       </div>
     )
