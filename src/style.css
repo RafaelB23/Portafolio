@@ -4,7 +4,7 @@ body{
     background-color: #2F3437;
     font-family: "Roboto";
     color: white;
-    font-size: 20px;
+    font-size: 16px;
 }
 p{
     margin: 0;
@@ -16,7 +16,7 @@ p{
     left: 0;
     display: flex;
     background-color: #212529;
-    padding: 0 150px;
+    padding: 0 9em;
     align-items: center;
     z-index: 100;
 }
@@ -58,12 +58,6 @@ ul{
     cursor: pointer;
     text-decoration: none;
 }
-section{
-    height: 100vh;
-    /* padding-top: 80px; */
-    /* padding-left: 150px;
-    padding-right: 150px; */
-}
 
 /* HOME */
 .hero, .block{
@@ -75,13 +69,13 @@ section{
     font-size: 3em;
     font-weight: 800;
 }
-.home__presentation{
-    font-size: 2.4em;
+.block__text{
+    font-size: 1.5em;
     font-weight: 300;
-    line-height: 50px;
+    line-height: 1.5em;
 }
 .home__cvtxt{
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 300;
     padding: 1em 0;
 }
@@ -103,13 +97,14 @@ section{
 .btn__cv:active{
     transform: scale(0.9);
 }
-.hero, .block__content{
+#hero, .block__content{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.hero, .block{
-    padding-left: 150px;
-    padding-right: 150px;
+.block{
+    padding-left: 9em;
+    padding-right: 9em;
+    height: 100vh;
 }
 .block{
     display:block;
@@ -122,17 +117,12 @@ section{
 }
 .title__block{
     position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    left: 0; right: 0;
+    margin-left: auto; margin-right: auto;
     font-weight: 300;
     font-size: 3em;
     width: 100%;
     text-align: center;
-}
-.home__text{
-    width: 50%;
 }
 .focus__name{
     color: #E35D6A;
@@ -141,37 +131,72 @@ section{
     width: 100%;
 }
 /* EDUCATION */
-.edu__text{
-    font-weight: 300;
-    line-height: 1.5em;
-    font-size: 2.4em;
-}
+
 /* EXPERIENCE */
-.exp__text{
-    font-weight: 300;
-    line-height: 1.5em;
-    margin-top: 0.5em;
-    font-size: 2em;
-}
+
 .grid-container{
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 1em 0;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(40px);
+    margin-bottom: 1em;
 }
 .grid-item{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 .skill-icon{
-    padding: 0.5em 1.4em;
-    width: 4em;
+    padding: 0.5em 30%;
+    width: 45%;
     margin-left: auto;
     margin-right: auto;
 }
 
 /* PROJECTS */
+
+.proj__conteiner{
+    display: flex;
+    gap: 20px;
+}
+.proj__card{
+    /* 
+    padding
+    bg
+    border
+    */
+    border: 1px solid white ;
+    border-radius: 15px;
+    padding: 1.5em;
+}
+.proj__img{
+    /* 
+    size
+    hover
+    */
+}
+.proj__name{
+    /* 
+    style
+    size
+    */
+}
+.proj__desc{
+    /* 
+    size
+    */
+}
+.proj__footer{
+    /* 
+    inline to rigth
+    */
+}
+.proj__btn__demo{
+
+}
+.proj__btn__git{
+    
+}
 
 /* ABOUT ME */
 
@@ -180,3 +205,5 @@ section{
 ::-webkit-scrollbar{
     display: none;
 }
+
+/* RESPONSIVE DESING */
