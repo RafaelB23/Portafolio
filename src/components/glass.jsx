@@ -39,18 +39,24 @@ export class GlassCards extends Component {
 }
 
 export class GlassCard extends Component {
-
+  long_description(desc) {
+    return desc.length<=188 ? "proj__desc":"proj__desc proj__desc__l" ;
+  }
   render() {
     return (
       <div className='proj__card'>
-        {/* {console.log(this.props.value)} */}
-        <img className='proj__img' src={img__proj} alt="proyect"/>
-        <p className='proj__name'>{this.props.value.name}</p>
-        <p className='proj__desc'>{this.props.value.desc}</p>
-        <div className='proj__footer'>
-          <button className='proj__btn__demo'>Demo</button>
-          <img className='proj__btn__git' src={github} alt="git"/>
+        <div className='proj__content'>
+          <img className='proj__img' src={img__proj} alt="proyect"/>
+          <p className='proj__name'>{this.props.value.name}</p>
+          <div  className={this.long_description(this.props.value.desc)}>
+            <p>{this.props.value.desc}</p>
+          </div>  
+          <div className='proj__footer'>
+            <button className='proj__btn__demo'>Demo</button>
+            <img className='proj__btn__git' src={github} alt="git"/>
+          </div>
         </div>
+        
       </div>
     )
   }
