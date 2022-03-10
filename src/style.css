@@ -1,3 +1,6 @@
+html{
+    scroll-behavior:smooth;
+}
 body{
     margin: 0;
     padding: 0;
@@ -54,7 +57,7 @@ ul{
 .nav__item{
     font-weight: 300;
     color: white;
-    padding: 1.5em;
+    padding: 1em 1.5em;
     cursor: pointer;
     text-decoration: none;
 }
@@ -114,6 +117,13 @@ ul{
     align-items: center;
     gap: 40px;
 }
+.block__carucel{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+    align-items: center;
+    /* overflow-x: scroll; */
+}
 .title__block{
     position: absolute;
     left: 0; right: 0;
@@ -127,6 +137,7 @@ ul{
     color: var(--focus-color);
 }
 .block__img{
+    max-height: 60vh;
     width: 100%;
 }
 /* EDUCATION */
@@ -155,7 +166,11 @@ ul{
 /* PROJECTS */
 
 .proj__conteiner{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    overflow: auto;
+    height: auto;
+    padding: 2.5em 0;
     gap: 20px;
 }
 .proj__card{
@@ -164,13 +179,12 @@ ul{
     bg
     border
     */
-    min-width: 200px;
-    max-width: 300px;
-    height: 100%;
+    width: 220px;
+    height: auto;
     overflow: auto;
     border: 1px solid rgba(255, 255, 255, 0.5) ;
     border-radius: var(--border-radius);
-    padding: 1.5em;
+    padding: 1em;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(40px);
 }
@@ -183,7 +197,10 @@ ul{
     size
     hover
     */
+    display: block;
     max-width: 100%;
+    margin-left: auto; margin-right: auto;
+    right: 0; left: 0;
     border-radius: var(--border-radius);
 }
 .proj__name{
@@ -200,14 +217,16 @@ ul{
     /* 
     size
     */
+    font-size: .8em;
     width: 100%;
-    height: 155px;
+    height: 90px;
     padding-right: 5px;
     text-align: center;
     overflow-y: scroll;
+    padding-bottom: 1em;
 }
 .proj__desc__l{
-    padding-left: 5px;
+    box-shadow: 0px -20px 25px -25px black inset;
 }
 .proj__footer{
     /* 
@@ -260,7 +279,7 @@ body::-webkit-scrollbar{
 }
 
 /* CARD SCROLL */
-.proj__desc::-webkit-scrollbar {
+.proj__desc::-webkit-scrollbar{
     display: none;
     -webkit-appearance: none;
 }
@@ -268,8 +287,9 @@ body::-webkit-scrollbar{
 ::-webkit-scrollbar:vertical {
     width:5px;
 }
-.proj__desc__l::-webkit-scrollbar{
+.proj__desc__l::-webkit-scrollbar,  .proj__conteiner::-webkit-scrollbar{
     display: block;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar-button:increment,::-webkit-scrollbar-button {

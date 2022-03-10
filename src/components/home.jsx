@@ -4,6 +4,7 @@ import "../style.css"
 import hero from '../images/undraw_programming_re_kg9v.svg'
 import edu from '../images/undraw_graduation_re_gthn.svg'
 import exp from '../images/undraw_developer_activity_re_39tg.svg'
+import me from '../images/me.svg'
 export class Home extends Component {
     render() {
         return (
@@ -60,7 +61,7 @@ export class Projects extends Component {
             <>
                 <div className="block" id='proj'>
                     <h1 className='title__block'>Projects</h1>
-                    <div className="block__content">
+                    <div className="block__carucel">
                         <GlassCards></GlassCards>
                     </div>
                 </div>
@@ -74,6 +75,12 @@ export class About extends Component {
             <>
                 <div className="block" id='about'>
                     <h1 className='title__block'>About me</h1>
+                    <div className='block__content'>
+                        <img className='block__img' src={me} alt="graduation" />
+                        <p className='block__text'>My goal is for the user to feel comfortable when interacting with my projects, being intuitives and with a minimalist design. 
+                        If you are interested in contacting me, you can do so through my email or my cell phone number.
+                        I'm excited about what we can accomplish together! </p>
+                    </div>
                 </div>
             </>
         )
