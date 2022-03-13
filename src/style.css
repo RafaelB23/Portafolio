@@ -273,6 +273,18 @@ ul{
 /* ABOUT ME */
 
 /* CONTACT ME */
+label{
+    font-size: 1em;
+}
+input, textarea{
+    display: block;
+    font-size: 1em;
+    font-family: 'Roboto';
+    padding: .5em;
+    border-radius: 5px;
+}
+
+/* **************************** */
 
 body::-webkit-scrollbar{
     display: none;

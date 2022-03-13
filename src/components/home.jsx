@@ -92,6 +92,23 @@ export class Contact extends Component {
             <>
                 <div className="block" id='cont'>
                     <h1 className='title__block'>Contact me</h1>
+                    <div className='block__content'>
+                        <form>
+                            <label for="email">Email 
+                                <input type="email" name="email" id="email" placeholder='Enter your email...'/>
+                            </label>
+                            <label for="name">Name 
+                                <input type="text" name="name" id="name" placeholder='Enter your name...'/>
+                            </label>
+                            <label for="tel">Phone number 
+                                <input type="tel" name="tel" id="tel" placeholder='Enter your phone number...'/>
+                            </label>
+                            <label for="mess">Message 
+                                <textarea name="mess" id="mess" placeholder='Enter your message...'/>
+                            </label>
+                            
+                        </form>
+                    </div>
                 </div>
             </>
         )
