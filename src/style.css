@@ -83,6 +83,7 @@ ul{
     padding: 1em 0;
 }
 .btn__cv{
+    width: auto;
     border-radius: 5px;
     padding: 1em 2em;
     background-color: #E35D6A;
@@ -105,29 +106,21 @@ ul{
     grid-template-columns: 1fr 1fr;
 }
 .block{
+    position: relative;
     padding: var(--margin-web-large);
+    min-height: 100vh;
     height: 100vh;
-}
-.block{
-    display:block;
-    padding-top: 2.5em;
 }
 .block__content{
     height: 100%;
     align-items: center;
     gap: 40px;
 }
-.block__carucel{
-    display: grid;
-    grid-template-columns: 1fr;
-    height: 100%;
-    align-items: center;
-    /* overflow-x: scroll; */
-}
+
 .title__block{
     position: absolute;
+    margin-top: 2em;
     left: 0; right: 0;
-    margin-left: auto; margin-right: auto;
     font-weight: 300;
     font-size: 3em;
     width: 100%;
@@ -164,14 +157,24 @@ ul{
 }
 
 /* PROJECTS */
-
+.block__project{
+    position: relative;
+    padding: var(--margin-web-large);
+    min-height: 100vh;
+    height: 100%;
+}
+.block__carucel{
+    height: fit-content;
+    width: 100%;
+}
 .proj__conteiner{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    overflow: auto;
-    height: auto;
+    grid-template-columns: repeat(auto-fill, 255px);
     padding: 2.5em 0;
-    gap: 20px;
+    gap: 40px;
+    padding-top: 14em;
+    margin-left: auto; margin-right: auto;
+    justify-content: center;
 }
 .proj__card{
     /* 
@@ -179,6 +182,7 @@ ul{
     bg
     border
     */
+    display: flex;
     width: 220px;
     height: auto;
     overflow: auto;
@@ -273,6 +277,9 @@ ul{
 /* ABOUT ME */
 
 /* CONTACT ME */
+form{
+    width: fit-content;
+}
 label{
     font-size: 1em;
     font-weight: 500;
@@ -291,6 +298,14 @@ input, textarea{
 }
 textarea{
     height: 5em;
+}
+.formulario{
+    display: flex;
+    margin-left: auto; margin-right: auto;
+}
+.btn{
+    display: flex;
+    justify-content: right;
 }
 
 /* **************************** */
