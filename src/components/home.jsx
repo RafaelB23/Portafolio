@@ -6,6 +6,7 @@ import edu from '../images/undraw_graduation_re_gthn.svg'
 import exp from '../images/undraw_developer_activity_re_39tg.svg'
 import me from '../images/me.svg'
 import contact from '../images/undraw_social_friends_re_7uaa.svg'
+import FormFrag from './form.jsx'
 
 export class Home extends Component {
     render() {
@@ -88,6 +89,7 @@ export class About extends Component {
         )
     }
 }
+
 export class Contact extends Component {
     render() {
         return (
@@ -95,25 +97,7 @@ export class Contact extends Component {
                 <div className="block" id='cont'>
                     <h1 className='title__block'>Contact me</h1>
                     <div className='block__content'>
-                        <div className='formulario'>
-                            <form action=''>
-                                <label for="email">Email 
-                                    <input type="email" name="email" id="email" placeholder='Enter your email...'/>
-                                </label>
-                                <label for="name">Name 
-                                    <input type="text" name="name" id="name" placeholder='Enter your name...'/>
-                                </label>
-                                <label for="tel">Phone number 
-                                    <input type="tel" name="tel" id="tel" placeholder='Enter your phone number...'/>
-                                </label>
-                                <label for="mess">Message 
-                                    <textarea name="mess" id="mess" placeholder='Enter your message...'/>
-                                </label>
-                                <div className='btn'>
-                                    <button className='btn__cv justify__end' type="submit">Enviar</button>
-                                </div>
-                            </form>
-                        </div>
+                        <FormFrag></FormFrag>
                         <img className='block__img' src={contact} alt="contacto" />
                     </div>
                 </div>
