@@ -1,39 +1,42 @@
 import React, {Fragment, useState} from "react";
+import emailjs from '@emailjs/browser';
 
 function FormFrag(){
-    const [email, setEmail] = useState('');
-    const [name, setName] = useState('');
-    const [phone, setPhone] = useState('');
-    const [mess, setMess] = useState('');
-    const [form, setForm] = useState([email, name, phone, mess])
+    const [form, setForm] = useState([])
     return(
         <>
             <div className='formulario'>
-                <form action='' onChange={(e)=>{
-                    
-                    const data = {
-                        email,
-                        name,
-                        phone,
-                        mess
-                    }
-                    setForm(data)
-                    console.log(form)
-                    // console.log(form['name'])
-                    }} onSubmit={(e)=>{
+                <form action='' onSubmit={(e)=>{
                         e.preventDefault();
-                        console.log(form)}} >
+                        const _mensaje={
+                            to_name:'Rafael',
+                            from_email:e.target.from_email.value,
+                            from_name:e.target.from_name.value,
+                            phone:e.target.phone.value,
+                            message:e.target.message.value
+                        }
+                        setForm(_mensaje)
+                        console.log(form)
+                        
+                        emailjs.send('default_service','template_35dnyfz',_mensaje, "8hTDr2w4iazrsD8gM")
+                        .then((result) => {
+                            console.log(result.text);
+                            alert('Mensaje enviado.')
+                        }, (error) => {
+                            console.log(error.text);
+                        });
+                        }} >
                     <label for="email">Email 
-                        <input type="email" name="email" id="email" placeholder='Enter your email...' onChange={(e)=>{setEmail(e.target.value)}}/>
+                        <input type="email" name="from_email" id="from_email" placeholder='Enter your email...' required/>
                     </label>
                     <label for="name">Name 
-                        <input type="text" name="name" id="name" placeholder='Enter your name...' onChange={(e)=>{setName(e.target.value)}}/>
+                        <input type="text" name="from_name" id="from_name" placeholder='Enter your name...' required/>
                     </label>
                     <label for="tel">Phone number 
-                        <input type="tel" name="tel" id="tel" placeholder='Enter your phone number...' onChange={(e)=>{setPhone(e.target.value)}}/>
+                        <input type="tel" name="phone" id="phone" placeholder='Enter your phone number...'/>
                     </label>
                     <label for="mess">Message 
-                        <textarea name="mess" id="mess" placeholder='Enter your message...' onChange={(e)=>{setMess(e.target.value)}}/>
+                        <textarea name="message" id="message" placeholder='Enter your message...' required/>
                     </label>
                     <div className='btn'>
                         <button className='btn__cv justify__end' type="submit">Enviar</button>
