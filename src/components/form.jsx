@@ -11,27 +11,34 @@ function FormFrag() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // e.target[0:3].value = ''
     sendEmail();
   };
   const sendEmail = async (e) => {
-    console.log('loading...')
+    const btn = document.getElementById("button");
+    btn.textContent = "Sending...";
+    console.log("Sending...");
     await emailjs
       .send("default_service", "template_35dnyfz", form, "8hTDr2w4iazrsD8gM")
       .then(
         (result) => {
+          btn.textContent = "Send Message";
           console.log("Estado: ", result.status);
-          console.log("Mensaje: ", form);
           alert("Mensaje enviado.");
+          document.getElementById("FormContact").reset();
         },
         (error) => {
+          btn.textContent = "Send Message";
           console.log(error.text);
+          document.getElementById("FormContact").reset();
         }
       );
   };
   return (
     <>
       <div className="formulario">
-        <form action="" onSubmit={handleSubmit}>
+        <form id="FormContact" onSubmit={handleSubmit}>
           <label htmlFor="email">
             Email
             <input
@@ -61,6 +68,8 @@ function FormFrag() {
               name="phone"
               id="phone"
               placeholder="Enter your phone number..."
+              maxLength={10}
+              pattern="[0-9]"
               onChange={handleChanges}
             />
           </label>
@@ -75,8 +84,8 @@ function FormFrag() {
             />
           </label>
           <div className="btn">
-            <button className="btn__cv justify__end" type="submit">
-              Enviar
+            <button className="btn__cv justify__end" type="submit" id="button">
+              Send Message
             </button>
           </div>
         </form>
