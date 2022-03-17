@@ -164,7 +164,6 @@ ul{
     height: 100%;
 }
 .block__carucel{
-    display: block;
     height: fit-content;
     min-height: 100vh;
     width: 100vw;
