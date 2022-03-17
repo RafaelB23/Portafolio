@@ -14,6 +14,7 @@ function FormFrag() {
     sendEmail();
   };
   const sendEmail = async (e) => {
+    console.log('loading...')
     await emailjs
       .send("default_service", "template_35dnyfz", form, "8hTDr2w4iazrsD8gM")
       .then(
