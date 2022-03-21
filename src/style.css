@@ -12,54 +12,64 @@ body{
 p{
     margin: 0;
 }
-.nav__div{
+.header{
+    display: flex;
     position: fixed;
-    right: 0;
+    /* align-items: center; */
+    justify-content: space-between;
+    width: 100%;
+    height: var(--nav-height);
+    /* padding: 0 9em; */
     top: 0;
     left: 0;
-    display: flex;
-    background-color: #212529;
-    padding: 0 9em;
-    align-items: center;
+    right: 0;
+    background-color: var(--nav-color);
     z-index: 100;
 }
-
-nav{
-    margin: 0;
-    padding: 0;
+.nav{
     display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    align-items: center;
     font-size: 16px;
+    line-height: var(--nav-height);
 }
 .logo, .logo__ghost{
     display: flex;
     font-weight: 600;
-    height: 30px;
     letter-spacing: 2px;
-    line-height: 30px;
+    line-height: var(--nav-height);
     white-space: nowrap;
     font-style: normal;
     color: white;
     cursor: pointer;
     text-decoration: none;
 }
+.logo{
+    padding-left: var(--margin-large);
+    padding-right: 4em;
+}
 .logo__ghost{
     visibility: hidden;
+    padding-left: 4em;
+    padding-right: var(--margin-large);
 }
 ul{
     display:flex;
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-right: auto;
+    /* margin-left: auto; */
+    /* line-height: 80px; */
 }
 .nav__item{
+    width: max-content;
     font-weight: 300;
     color: white;
     padding: 1em 1.5em;
     cursor: pointer;
     text-decoration: none;
+}
+.nav-menu-item{
+    width: max-content;
 }
 
 /* HOME */
@@ -297,6 +307,8 @@ input, textarea{
     border-radius: 5px;
     margin-top: .5em; margin-bottom: 1em;
     resize: none;
+    /* CHECK THIS LINES */
+    outline-style: none;
 }
 textarea{
     height: 5em;
@@ -346,14 +358,103 @@ textarea::-webkit-scrollbar{
     border-radius: 10px;  
 }
 /* RESPONSIVE DESING */
-
+@media screen and (max-width: 1215px) {
+    .header {
+        /* background-color: #797979; */
+        align-items: baseline;
+    }   
+    .nav{
+        position: absolute;
+        width: 100%;
+        line-height: 60px;
+        background-color: var(--nav-item-menu-color);
+        margin-top: var(--nav-height);
+    } 
+    .nav-menu-item{
+        width: 100%;
+        text-align: center;
+    }
+    ul{
+        width: 100%;
+        height: auto;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+    }
+    .logo__ghost{
+        position: absolute;
+    }
+}
+@media screen and (max-width: 390px){
+    .index{
+        width: 448px;
+    }
+    body{
+        font-size: 14px;
+        margin-top: var(--nav-height);
+        width: 100%;
+    }
+    .logo{
+        font-size: 16px;
+        padding-left: var(--margin-small);
+        padding-right: 4em;
+    }
+    .logo__ghost{
+        visibility: hidden;
+        padding-left: 4em;
+        padding-right: var(--margin-small);
+    }
+    .title__block{
+        position: absolute;
+        /* width: 100%; */
+        margin-top: 2em;
+        left: 0; right: 0;
+        font-weight: 300;
+        font-size: 3em;
+        width: 100%;
+        text-align: center;
+    }
+    #hero, .block__content{
+        margin-top: var(--nav-height);
+        display: flex;
+        flex-direction: column;
+        height: 100hv;
+        justify-content: center;
+        align-items: center;
+        margin-top: auto; margin-bottom: auto;
+    }
+    .block{
+        position: relative;
+        padding: var(--margin-web-small);
+        min-height: 100vh;
+        height: 100vh;
+    }
+    .block__project{
+        position: relative;
+        padding: var(--margin-web-large);
+        min-height: 100vh;
+        height: 100%;
+    }
+    section{
+        height: 100%;
+    }
+}
 
 :root{
     /* Body */
     --margin-web-large:0 9em 0 9em;
+    --margin-web-small:0 2em 0 2em;
+    --margin-large:9em;
+    --margin-small:2em;
+    /* Nav */
+    --nav-color:#212529;
+    --nav-item-menu-color:#212529c0;
+    --nav-height:80px;
     /* Blocks */
     --primary-size-text:1.5em;
 
     --focus-color:#E35D6A;
     --border-radius:10px;
 }
+
+/* 1215 w */
