@@ -1,7 +1,9 @@
 html{
     scroll-behavior:smooth;
+    width: 100%;
 }
 body{
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: #2F3437;
@@ -21,8 +23,6 @@ p{
     height: var(--nav-height);
     /* padding: 0 9em; */
     top: 0;
-    left: 0;
-    right: 0;
     background-color: var(--nav-color);
     z-index: 100;
 }
@@ -71,10 +71,13 @@ ul{
 .nav-menu-item{
     width: max-content;
 }
-
+.index{
+    width: 100%;
+}
 /* HOME */
 .hero, .block{
     height: 100%;
+    width: 100%;
     align-items: center;
     align-content: center;
 }
@@ -362,8 +365,10 @@ textarea::-webkit-scrollbar{
     .header {
         /* background-color: #797979; */
         align-items: baseline;
+        position: fixed;
     }   
     .nav{
+        visibility: hidden;
         position: absolute;
         width: 100%;
         line-height: 60px;
@@ -386,9 +391,9 @@ textarea::-webkit-scrollbar{
     }
 }
 @media screen and (max-width: 390px){
-    .index{
+    /* .index{
         width: 448px;
-    }
+    } */
     body{
         font-size: 14px;
         margin-top: var(--nav-height);
@@ -437,6 +442,7 @@ textarea::-webkit-scrollbar{
     }
     section{
         height: 100%;
+        width: 100%;
     }
 }
 
