@@ -68,11 +68,17 @@ ul{
     cursor: pointer;
     text-decoration: none;
 }
+.nav__item:hover{
+    color: var(--primary);
+}
+.nav__item:active{
+    color: var(--primary);
+}
 .nav-menu-item{
     width: max-content;
 }
 .index{
-    padding: 0 4em;
+    padding: var(--margin-web-large);
 }
 /* HOME */
 .hero, .block{
@@ -86,6 +92,12 @@ ul{
     font-weight: 800;
 }
 .block__text{
+    /* width: 50%; */
+    font-size: var(--primary-size-text);
+    font-weight: 300;
+    line-height: 1.5em;
+}
+.block__text--exp{
     font-size: var(--primary-size-text);
     font-weight: 300;
     line-height: 1.5em;
@@ -129,12 +141,14 @@ ul{
     height: 100vh;
 }
 .block__content{
-    height: 100%;
+    /* height: 100%; */
     align-items: center;
     gap: 40px;
 }
 
 .title__block{
+    margin: 0;
+    margin-top: 12px;
     font-weight: 300;
     font-size: 3em;
     width: 100%;
@@ -145,19 +159,21 @@ ul{
 }
 .block__img{
     max-height: 60vh;
-    width: 100%;
+    width: 50%;
 }
 /* EDUCATION */
 
 /* EXPERIENCE */
-
+.block__text--50{
+    width: 50%;
+}
 .grid-container{
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 1em 0;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(40px);
-    margin-bottom: 1em;
+    width: 50%;
 }
 .grid-item{
     display: grid;
@@ -172,24 +188,25 @@ ul{
 
 /* PROJECTS */
 .block__project{
-    position: relative;
+    /* position: relative; */
     padding: var(--margin-web-large);
     min-height: 100vh;
     height: 100%;
 }
 .block__carucel{
+    padding-top: 2.5em;
     height: fit-content;
     min-height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
     align-items: center;
     justify-content: center;
 }
 .proj__conteiner{
     display: grid;
     grid-template-columns: repeat(auto-fit, 255px);
-    padding: 2.5em 0;
+    /* padding: 2.5em 0; */
     gap: 40px;
-    padding-top: 14em;
+    /* padding-top: 14em; */
     justify-content: center;
 }
 .proj__card{
@@ -363,6 +380,9 @@ textarea::-webkit-scrollbar{
 }
 /* RESPONSIVE DESING */
 @media screen and (max-width: 400px) {
+    .index{
+        width: 100vw;
+    }
     .header {
         /* background-color: #797979; */
         align-items: baseline;
@@ -392,27 +412,13 @@ textarea::-webkit-scrollbar{
     }
 }
 @media screen and (max-width: 390px){
-    .test-block{
-        display: flex;
-        height: 100vh;
-        padding: 0 18px;
-        /* padding-top: var(--nav-height); */
-        /* justify-content: center; */
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: justify;
+    .index{
+        width: 100%;
+        padding: 0;
     }
     .start{
         padding-top: var(--nav-height);
     }
-    .test-text{
-        /* height: 100%; */
-        padding: 60px 0;
-    }
-    /* .index{
-        width: 448px;
-    } */
     body{
         font-size: 14px;
         margin-top: var(--nav-height);
@@ -438,11 +444,15 @@ textarea::-webkit-scrollbar{
         width: 100%;
         text-align: center;
     }
+    .block__img{
+        width: 100%;
+        height: 30vh;
+    }
     #hero, .block__content{
         margin-top: var(--nav-height);
         display: flex;
         flex-direction: column;
-        height: 100hv;
+        /* height: 100vh; */
         justify-content: center;
         align-items: center;
         margin-top: auto; margin-bottom: auto;
@@ -456,11 +466,20 @@ textarea::-webkit-scrollbar{
         min-height: 100vh;
         height: 100vh;
     }
+    .block__text--50{
+        width: 100%;
+    }
+    .flex-reverse{
+        flex-direction: column-reverse;
+    }
     .block__project{
         position: relative;
         padding: var(--margin-web-large);
         min-height: 100vh;
         height: 100%;
+    }
+    .grid-container{
+        width: 100%;
     }
     section{
         height: 100%;
@@ -470,19 +489,24 @@ textarea::-webkit-scrollbar{
 
 :root{
     /* Body */
-    --margin-web-large:0 9em 0 9em;
-    --margin-web-small:0 2em 0 2em;
+    --margin-web-large:0 9em;
+    --margin-web-small:0 2em;
     --margin-large:9em;
     --margin-small:2em;
     /* Nav */
     --nav-color:#212529;
     --nav-item-menu-color:#212529c0;
-    --nav-height:80px;
+    --nav-height:56px;
     /* Blocks */
     --primary-size-text:1.5em;
 
     --focus-color:#E35D6A;
     --border-radius:10px;
+    
+    /* COLOR */
+    --primary: #E35D6A;
+    --secondary: #212529;
+    --tertiary: #2F3437;
 }
 
 /* 1215 w */

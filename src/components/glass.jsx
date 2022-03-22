@@ -8,18 +8,8 @@ import projects__data from "../data/projects.json";
 export class GlassBox extends Component {
   render() {
     return (
-      <div>
-        <div className="grid-container">
-          <div>
-            {/* Bloque de habilidades que manejo */}
-            <GridSkills></GridSkills>
-          </div>
-        </div>
-        <p className="block__text">
-          I worked on some projects where I developed a complete environment
-          following agile methodologies such as the SCRUM and the waterfall
-          methodology.
-        </p>
+      <div className="grid-container">
+        <GridSkills></GridSkills>
       </div>
     );
   }

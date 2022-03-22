@@ -71,28 +71,28 @@ export class Education extends Component {
   }
 }
 
-{/* 
-<div className="test-block">
-  <div className="start">
-    <h1>Test</h1>
-  </div>
-  <div className="center">
 
-  </div>
-  <div className="end">
-    <h1>Fin</h1>
-  </div>
-</div>
-*/}
 export class Experience extends Component {
   render() {
     return (
       <>
         <div className="block" id="exp">
-          <h1 className="title__block">Experience</h1>
-          <div className="block__content">
-            <GlassBox></GlassBox>
-            <img className="block__img" src={exp} alt="graduation" />
+          <div className="start">
+            <h1 className="title__block">Experience</h1>
+          </div>
+          <div className="center">            
+            <div className="block__content flex-reverse">
+              <p className="block__text block__text--50">
+                I worked on some projects where I developed a complete environment
+                following agile methodologies such as the SCRUM and the waterfall
+                methodology.
+              </p>
+              <GlassBox></GlassBox>
+              {/* <img className="block__img" src={exp} alt="graduation" /> */}
+            </div>
+          </div>
+          <div className="end">
+
           </div>
         </div>
       </>
@@ -104,9 +104,16 @@ export class Projects extends Component {
     return (
       <>
         <div className="block__proj" id="proj">
-          <h1 className="title__block">Projects</h1>
-          <div className="block__carucel">
-            <GlassCards></GlassCards>
+          <div className="start">            
+            <h1 className="title__block">Projects</h1>
+          </div>
+          <div className="center">            
+            <div className="block__carucel">
+              <GlassCards></GlassCards>
+            </div>
+          </div>
+          <div className="end">
+
           </div>
         </div>
       </>
@@ -118,16 +125,23 @@ export class About extends Component {
     return (
       <>
         <div className="block" id="about">
-          <h1 className="title__block">About me</h1>
-          <div className="block__content">
-            <img className="block__img" src={me} alt="graduation" />
-            <p className="block__text">
-              My goal is for the user to feel comfortable when interacting with
-              my projects, being intuitives and with a minimalist design. If you
-              are interested in contacting me, you can do so through my email or
-              my cell phone number. I'm excited about what we can accomplish
-              together!{" "}
-            </p>
+          <div className="start">            
+            <h1 className="title__block">About me</h1>
+          </div>
+          <div className="center">
+            <div className="block__content">
+              <img className="block__img" src={me} alt="graduation" />
+              <p className="block__text block__text--50">
+                My goal is for the user to feel comfortable when interacting with
+                my projects, being intuitives and with a minimalist design. If you
+                are interested in contacting me, you can do so through my email or
+                my cell phone number. I'm excited about what we can accomplish
+                together!{" "}
+              </p>
+            </div>
+          </div>
+          <div className="end">
+
           </div>
         </div>
       </>
@@ -140,10 +154,17 @@ export class Contact extends Component {
     return (
       <>
         <div className="block" id="cont">
-          <h1 className="title__block">Contact me</h1>
-          <div className="block__content">
-            <FormFrag></FormFrag>
-            <img className="block__img" src={contact} alt="contacto" />
+          <div className="start">            
+            <h1 className="title__block">Contact me</h1>
+          </div>
+          <div className="center">            
+            <div className="block__content">
+              <FormFrag></FormFrag>
+              <img className="block__img" src={contact} alt="contacto" />
+            </div>
+          </div>
+          <div className="end">
+
           </div>
         </div>
       </>
