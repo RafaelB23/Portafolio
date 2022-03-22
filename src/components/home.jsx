@@ -13,18 +13,28 @@ export class Home extends Component {
     return (
       <>
         <div className="block" id="hero">
-          <div className="hero__text">
-            <p className="home__header">
-              Hi <span>✋🏻</span>!
-            </p>
-            <p className="block__text">
-              I'm <span className="focus__name">Rafael Mejia</span>. Software
-              developer very passionate and professional.
-            </p>
-            <p className="home__cvtxt">Here you can download my CV...</p>
-            <button className="btn__cv">Resume CV</button>
+          {/* START */}
+          <div className="start">
+            {/* <h1>Test</h1> */}
           </div>
-          <img className="block__img" src={hero} alt="hero__programing" />
+          <div className="center block__content">
+            <div className="hero__text">
+              <p className="home__header">
+                Hi <span>✋🏻</span>!
+              </p>
+              <p className="block__text">
+                I'm <span className="focus__name">Rafael Mejia</span>. Software
+                developer very passionate and professional.
+              </p>
+              <p className="home__cvtxt">Here you can download my CV...</p>
+              <button className="btn__cv">Resume CV</button>
+            </div>
+            <img className="block__img" src={hero} alt="hero__programing" />
+          </div>
+          <div className="end">
+            {/* <h1>Fin</h1> */}
+          </div>
+          {/* END */}
         </div>
       </>
     );
@@ -35,24 +45,45 @@ export class Education extends Component {
     return (
       <>
         <div className="block" id="edu">
-          <h1 className="title__block">Education</h1>
-          <div className="block__content">
-            <img className="block__img" src={edu} alt="graduation" />
-            <p className="block__text">
-              I am an eighth-semester student of{" "}
-              <span className="focus__name">
-                Software Technology Engineering
-              </span>{" "}
-              at the Autonomous University of Nuevo León. With self-taught
-              knowledge of front-end and back-end for web and mobile development
-              and with a long way to continue learning.
-            </p>
+          <div className="start">
+            <h1 className="title__block">Education</h1>
+          </div>
+          <div className="center">
+            <div className="block__content">
+              <img className="block__img" src={edu} alt="graduation" />
+              <p className="block__text">
+                I am an eighth-semester student of{" "}
+                <span className="focus__name">
+                  Software Technology Engineering
+                </span>{" "}
+                at the Autonomous University of Nuevo León. With self-taught
+                knowledge of front-end and back-end for web and mobile
+                development and with a long way to continue learning.
+              </p>
+            </div>
+          </div>
+          <div className="end">
+            {/* <h1>Fin</h1> */}
           </div>
         </div>
       </>
     );
   }
 }
+
+{/* 
+<div className="test-block">
+  <div className="start">
+    <h1>Test</h1>
+  </div>
+  <div className="center">
+
+  </div>
+  <div className="end">
+    <h1>Fin</h1>
+  </div>
+</div>
+*/}
 export class Experience extends Component {
   render() {
     return (

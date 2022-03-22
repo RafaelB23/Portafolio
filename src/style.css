@@ -1,9 +1,9 @@
 html{
     scroll-behavior:smooth;
-    width: 100%;
+    /* width: 100%; */
 }
 body{
-    width: 100%;
+    /* width: 100%; */
     margin: 0;
     padding: 0;
     background-color: #2F3437;
@@ -72,7 +72,7 @@ ul{
     width: max-content;
 }
 .index{
-    width: 100%;
+    padding: 0 4em;
 }
 /* HOME */
 .hero, .block{
@@ -115,12 +115,16 @@ ul{
     transform: scale(0.9);
 }
 #hero, .block__content{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    /* grid-template-columns: 1fr 1fr; */
+}
+.start{
+    padding-top: var(--nav-height);
 }
 .block{
-    position: relative;
-    padding: var(--margin-web-large);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-height: 100vh;
     height: 100vh;
 }
@@ -131,9 +135,6 @@ ul{
 }
 
 .title__block{
-    position: absolute;
-    margin-top: 2em;
-    left: 0; right: 0;
     font-weight: 300;
     font-size: 3em;
     width: 100%;
@@ -361,14 +362,14 @@ textarea::-webkit-scrollbar{
     border-radius: 10px;  
 }
 /* RESPONSIVE DESING */
-@media screen and (max-width: 1215px) {
+@media screen and (max-width: 400px) {
     .header {
         /* background-color: #797979; */
         align-items: baseline;
         position: fixed;
     }   
     .nav{
-        visibility: hidden;
+        /* visibility: hidden; */
         position: absolute;
         width: 100%;
         line-height: 60px;
@@ -391,6 +392,24 @@ textarea::-webkit-scrollbar{
     }
 }
 @media screen and (max-width: 390px){
+    .test-block{
+        display: flex;
+        height: 100vh;
+        padding: 0 18px;
+        /* padding-top: var(--nav-height); */
+        /* justify-content: center; */
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: justify;
+    }
+    .start{
+        padding-top: var(--nav-height);
+    }
+    .test-text{
+        /* height: 100%; */
+        padding: 60px 0;
+    }
     /* .index{
         width: 448px;
     } */
@@ -410,10 +429,10 @@ textarea::-webkit-scrollbar{
         padding-right: var(--margin-small);
     }
     .title__block{
-        position: absolute;
+        /* position: absolute; */
         /* width: 100%; */
-        margin-top: 2em;
-        left: 0; right: 0;
+        /* margin-top: 2em; */
+        /* left: 0; right: 0; */
         font-weight: 300;
         font-size: 3em;
         width: 100%;
@@ -427,6 +446,9 @@ textarea::-webkit-scrollbar{
         justify-content: center;
         align-items: center;
         margin-top: auto; margin-bottom: auto;
+    }
+    .start{
+        padding-top: var(--nav-height);
     }
     .block{
         position: relative;
