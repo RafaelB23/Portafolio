@@ -3,7 +3,7 @@ import { GlassBox, GlassCards } from "./glass";
 import "../style.css";
 import hero from "../images/undraw_programming_re_kg9v.svg";
 import edu from "../images/undraw_graduation_re_gthn.svg";
-import exp from "../images/undraw_developer_activity_re_39tg.svg";
+// import exp from "../images/undraw_developer_activity_re_39tg.svg";
 import me from "../images/me.svg";
 import contact from "../images/undraw_social_friends_re_7uaa.svg";
 import FormFrag from "./form.jsx";

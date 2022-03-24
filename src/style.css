@@ -31,6 +31,24 @@ p{
     font-size: 16px;
     line-height: var(--nav-height);
 }
+.nav-center{
+    display: contents;
+}
+.nav-end{
+    margin-top: auto; margin-bottom: auto;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    padding-right: var(--margin-small);
+}
+.nav-btn{
+    background-color: transparent;
+    border: none;
+}
+.bars{
+    /* visibility: hidden; */
+}
+
 .logo, .logo__ghost{
     display: flex;
     font-weight: 600;
@@ -379,7 +397,7 @@ textarea::-webkit-scrollbar{
     border-radius: 10px;  
 }
 /* RESPONSIVE DESING */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1230px) {
     .index{
         width: 100vw;
     }
@@ -389,7 +407,7 @@ textarea::-webkit-scrollbar{
         position: fixed;
     }   
     .nav{
-        /* visibility: hidden; */
+        visibility: hidden;
         position: absolute;
         width: 100%;
         line-height: 60px;
@@ -411,7 +429,7 @@ textarea::-webkit-scrollbar{
         position: absolute;
     }
 }
-@media screen and (max-width: 390px){
+@media screen and (max-width: 460px){
     .index{
         width: 100%;
         padding: 0;
@@ -464,7 +482,14 @@ textarea::-webkit-scrollbar{
         position: relative;
         padding: var(--margin-web-small);
         min-height: 100vh;
-        height: 100vh;
+        /* height: 100vh; */
+    }
+    .block__proj{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: var(--margin-web-small);
+        min-width: 100vw;
     }
     .block__text--50{
         width: 100%;
@@ -480,6 +505,16 @@ textarea::-webkit-scrollbar{
     }
     .grid-container{
         width: 100%;
+    }
+    .proj__conteiner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .formulario{
+        width: 90%;
+        max-width: 430px;
     }
     section{
         height: 100%;
