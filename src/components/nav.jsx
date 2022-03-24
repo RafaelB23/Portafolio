@@ -7,18 +7,11 @@ export default class Nav extends Component {
     
     function handleChanges(){
       var navBar = document.getElementById('nav')
-      // console.log(navBar.style.visibility)
-      // navBar.style.visibility = 'visible'
       setMenu ? setMenu = false : setMenu = true
       setMenu ? navBar.style.visibility = 'visible' : navBar.style.visibility = 'hidden'
 
       return console.log(setMenu)         
     }
-    // function hideNav(status){
-    //   const hide = () => {
-    //     document.getElementById('nav').visibility
-    //   }
-    // }
     return (
       <>
         <header className="header">
