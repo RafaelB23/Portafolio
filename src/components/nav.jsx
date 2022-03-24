@@ -9,9 +9,15 @@ export default class Nav extends Component {
       var navBar = document.getElementById('nav')
       setMenu ? setMenu = false : setMenu = true
       setMenu ? navBar.style.visibility = 'visible' : navBar.style.visibility = 'hidden'
-
       return console.log(setMenu)         
     }
+
+    function reportResize(){
+      if(window.innerWidth>1230){
+        document.getElementById('nav').style = ''
+      }
+    }
+    window.onresize = reportResize
     return (
       <>
         <header className="header">

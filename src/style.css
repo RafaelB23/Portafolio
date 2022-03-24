@@ -28,6 +28,7 @@ p{
 }
 .nav{
     display: flex;
+    visibility: visible;
     font-size: 16px;
     line-height: var(--nav-height);
 }
@@ -35,20 +36,15 @@ p{
     display: contents;
 }
 .nav-end{
+    padding-right: var(--margin-large);
+    padding-left: 20px;
     margin-top: auto; margin-bottom: auto;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-    padding-right: var(--margin-small);
 }
 .nav-btn{
+    visibility: hidden;
     background-color: transparent;
     border: none;
 }
-.bars{
-    /* visibility: hidden; */
-}
-
 .logo, .logo__ghost{
     display: flex;
     font-weight: 600;
@@ -62,7 +58,7 @@ p{
 }
 .logo{
     padding-left: var(--margin-large);
-    padding-right: 4em;
+    /* padding-right: 4em; */
 }
 .logo__ghost{
     visibility: hidden;
@@ -398,13 +394,13 @@ textarea::-webkit-scrollbar{
 }
 /* RESPONSIVE DESING */
 @media screen and (max-width: 1230px) {
-    .index{
-        width: 100vw;
-    }
     .header {
         align-items: baseline;
         position: fixed;
-    }   
+    } 
+    .logo{
+        padding-right: 0;
+    }  
     .nav{
         visibility: hidden;
         position: absolute;
@@ -413,6 +409,13 @@ textarea::-webkit-scrollbar{
         background-color: var(--nav-item-menu-color);
         margin-top: var(--nav-height);
     } 
+    .nav-end{
+        padding-right: var(--margin-large);
+    }
+    .nav-btn{
+        visibility: visible;
+        /* padding-right: var(--margin-small); */
+    }
     .nav-menu-item{
         width: 100%;
         text-align: center;
@@ -443,7 +446,7 @@ textarea::-webkit-scrollbar{
     .logo{
         font-size: 16px;
         padding-left: var(--margin-small);
-        padding-right: 4em;
+        /* padding-right: 4em; */
     }
     .logo__ghost{
         visibility: hidden;
