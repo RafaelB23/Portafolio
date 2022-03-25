@@ -4,11 +4,17 @@ import Bars from "../images/bars.svg"
 export default class Nav extends Component {
   render() {
     var setMenu = false
-    
+    // var navHidden = document.getElementById('nav')
+    // navHidden.onclick = hiddenMenu
+    // function hiddenMenu(){
+    //   // console.log("click")
+    //   const navBar = document.getElementById('nav')
+    //   navBar.style.right = '-120%'
+    // }
     function handleChanges(){
       var navBar = document.getElementById('nav')
       setMenu ? setMenu = false : setMenu = true
-      setMenu ? navBar.style.visibility = 'visible' : navBar.style.visibility = 'hidden'
+      setMenu ? navBar.style.right = '0%' : navBar.style.right = '-120%'
       return console.log(setMenu)         
     }
 

@@ -31,6 +31,7 @@ p{
     visibility: visible;
     font-size: 16px;
     line-height: var(--nav-height);
+    transition: all 0.5s;
 }
 .nav-center{
     display: contents;
@@ -401,8 +402,15 @@ textarea::-webkit-scrollbar{
     .logo{
         padding-right: 0;
     }  
+    .nav-start, .nav-end{
+        z-index: 100;
+    }
+    .nav-menu, .nav-menu-item, .nav__item{
+        z-index: 98;
+    }
     .nav{
-        visibility: hidden;
+        /* z-index: 98; */
+        right: -120%;
         position: absolute;
         width: 100%;
         line-height: 60px;
@@ -431,6 +439,9 @@ textarea::-webkit-scrollbar{
     }
 }
 @media screen and (max-width: 460px){
+    .nav-end{
+        padding-right: var(--margin-small);
+    }
     .index{
         width: 100%;
         padding: 0;
